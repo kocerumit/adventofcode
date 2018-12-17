@@ -1004,7 +1004,7 @@ while(bool == false){
     solArray[b] = sol;
     b = b + 1;
   }
-  solArray.sort();
+  solArray.sort(function (a, b) { return a - b });
   for(var i=0; i< solArray.length; i++)
   {
     if(solArray[i] == solArray[i+1])
