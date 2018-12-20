@@ -1,4 +1,4 @@
-var arr1 = [3,
+var inputArray1 = [3,
 15	,
 -1	,
 -18	,
@@ -992,26 +992,29 @@ var arr1 = [3,
 4	,
 80915
 ];
-var arr1Length = arr1.length; 
-var sol = 0;
-var solArray = [];
+var inputArray = [+3, +3, +4, -2, -4 ]
+var inputLength = inputArray.length; 
+var solution = 0;
+var solutionArray = [];
 var bool = false;
-var b = 0;
+var count = 0;
 while(bool == false){
-  for (var freq = 0; freq < arr1Length; freq++) 
+  for (var i = 0; i < inputLength; i++) 
   {
-    sol = sol + arr1[freq];
-    solArray[b] = sol;
-    b = b + 1;
+    solution = solution + inputArray[i];
+    solutionArray[count] = solution;
+    count = count + 1;
   }
-  solArray.sort(function (a, b) { return a - b });
-  for(var i=0; i< solArray.length; i++)
-  {
-    if(solArray[i] == solArray[i+1])
-    {
-      bool = true;
-      break;
+
+  for (var i = 0; i<solutionArray.length; i++){
+    for(var j = 1; j<solutionArray.length; j++){
+      if(solutionArray[i] == solutionArray[j]){
+        bool = true;
+        break;
+      }
     }
   }
 }
-console.log(solArray[i]);
+console.log(solutionArray[j]);
+//document.write(solutionArray[j]);
+document.write(solutionArray);
